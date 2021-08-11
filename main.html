@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <title>Expresiones Regulares</title>
+    <link rel="stylesheet" href="style.css">
+
+</head>
+<body>
+
+<div class="container">
+
+    <form id="form" class="form">
+        <div class="form-control">
+            <input type="text" id="nombre" placeholder="Nombre..."
+                   pattern="[a-zA-ZàáâäãåąčćęèéêëėįìíîïłńòóôöõøùúûüųūÿýżźñçčšžÀÁÂÄÃÅĄĆČĖĘÈÉÊËÌÍÎÏĮŁŃÒÓÔÖÕØÙÚÛÜŲŪŸÝŻŹÑßÇŒÆČŠŽ∂ð ,.'-]{2,64}"
+                   title="El nombre contiene solo letras, sin números"/>
+            <input type="submit" value="Verificar"/>
+        </div>
+
+
+        <div class="form-control">
+            <input type="text" id="apellido" placeholder="Apellido..."
+                   pattern="[a-zA-ZàáâäãåąčćęèéêëėįìíîïłńòóôöõøùúûüųūÿýżźñçčšžÀÁÂÄÃÅĄĆČĖĘÈÉÊËÌÍÎÏĮŁŃÒÓÔÖÕØÙÚÛÜŲŪŸÝŻŹÑßÇŒÆČŠŽ∂ð ,.'-]{2,64}"
+                   title="El apellido contiene solo letras, sin números"/>
+            <input type="submit" value="Verificar" name="Submit"/>
+        </div>
+
+
+        <div class="form-control">
+            <input type="text" id="dni" name="DNI" placeholder="DNI..."
+                   pattern="^[0-9]{8}[T|R|W|A|G|M|Y|F|P|D|X|B|N|J|Z|S|Q|V|H|L|C|K|E]$"
+                   title="Por ejemplo: 12345678A"/>
+            <input type="submit" value="Verificar" name="Submit"/>
+        </div>
+
+        <div class="form-control">
+            <input type="text" id="telefono" name="Teléfono" placeholder="Teléfono..."
+                   pattern="^(0034|\+34)?(\d\d\d)-? ?(\d\d)-? ?(\d)-? ?(\d)-? ?(\d\d)$"
+                   title="Por ejemplo: +(34)123456789 o 00(34)123456789"/>
+            <input type="submit" value="Verificar" name="Submit"/>
+        </div>
+
+        <div class="form-control">
+            <input type="text" id="email" name="EMail" placeholder="Email..."
+                   pattern="[a-z0-9._%+-]+@[a-z0-9.-]+\.[a-z]{2,}$"
+                   title="Por ejemplo: porejemplo@gmail.com"/>
+            <input type="submit" value="Verificar" name="Submit"/>
+        </div>
+
+        <div class="form-control">
+            <input type="text" id="direccion" name="Direccion" placeholder="Direccion..."
+                   pattern="^[#.0-9a-zA-Z\s,-]+$"
+                   title="Por ejemplo: C. Concepción Arenal, 165"/>
+            <input type="submit" value="Verificar" name="Submit"/>
+        </div>
+
+    </form>
+</div>
+<script src="ExReg.js"></script>
+</body>
+</html>
